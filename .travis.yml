@@ -8,5 +8,6 @@ before_install:
  - sudo apt-get install -qq clamav-daemon
  - sudo freshclam
  - sudo /etc/init.d/clamav-daemon start
+ - sudo echo TCPSocket 3310 >> /etc/clamav/clamd.conf
  - sudo cat /etc/clamav/clamd.conf
 

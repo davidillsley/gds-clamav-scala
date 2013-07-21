@@ -4,10 +4,5 @@ scala:
 jdk:
   - openjdk7
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq clamav-daemon
- - sudo freshclam
- - sudo echo TCPSocket 3310 >> /etc/clamav/clamd.conf
- - sudo /etc/init.d/clamav-daemon start
- - sudo cat /etc/clamav/clamd.conf
+ - sudo ./clamav-travis.sh
 
